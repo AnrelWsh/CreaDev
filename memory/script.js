@@ -30,7 +30,6 @@ let memory_tile_ids = []
 let tiles_flipped = 0
 
 let board = document.getElementById("memory_board")
-let card =  document.querySelectorAll("#memory_board div")
 let nbTries = document.getElementById("nbTries")
 let n = 0
 
@@ -52,7 +51,7 @@ function newBoard() {
 
 	for (let i = 0; i < memory_array.length; i++) {
 		output +=
-			'<div id="tile_' + i +' "class="back" onclick="memoryFlipTile(this,\'' + memory_array[i] +
+			'<div id="back tile_' + i +' "class="tile back" onclick="memoryFlipTile(this,\'' + memory_array[i] +
             "')\"></div>"
 	}
 	board.innerHTML = output
@@ -61,8 +60,6 @@ function newBoard() {
 function memoryFlipTile(tile, val) {
 
 	if (tile.innerHTML == "" && memory_values.length < 2) {
-        card.classList.toggle('flipped')
-        card.style.transform = "rotateY(180deg)"
 		tile.style.background = "#FFF"
 		tile.innerHTML = val
 
@@ -91,9 +88,9 @@ function memoryFlipTile(tile, val) {
                     let tile_1 = document.getElementById(memory_tile_ids[0])
                     let tile_2 = document.getElementById(memory_tile_ids[1])
                     
-					tile_1.style.backgroundColor = "#ccc"
+					tile_1.style.backgroundColor = "#800b00"
 					tile_1.innerHTML = ""
-					tile_2.style.backgroundColor = "#ccc"
+					tile_2.style.backgroundColor = "#800b00"
 					tile_2.innerHTML = ""
                     
 					memory_values = []
