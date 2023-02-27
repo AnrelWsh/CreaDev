@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.shake {
+	font-size: 3rem;
+    width: 50vw;
+    padding: 5%;
+    margin: 50px auto 0;
+    text-align: center;
+    background-color: blanchedalmond;
+    color:blueviolet;
+    border-radius: 50px;
+}
+.shake:hover {
+	animation: shake;
+	animation-duration: 0.5s;
+	animation-iteration-count: 5;
+}
+
+@keyframes shake {
+	0% {
+		transform: rotate(0deg);
+	}
+	12% {
+		transform: translateY(20px);
+	}
+	25% {
+		transform: rotate(-20deg);
+	}
+	37% {
+		transform: translateX(50px);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	62% {
+		transform: translateY(30px);
+	}
+	75% {
+		transform: rotate(20deg);
+	}
+	87% {
+		transform: translateX(-20px);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+.txt { 
+    opacity: 1; 
+    transition: all 0.5s; 
+}
+.txt .hide { 
+    opacity: 0; 
+}
+
+.main{
+	font-size: 4rem;
+    width: 50vw;
+    padding: 5%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 50px;
+	border: 3px solid black;
+}
+
+.div{
+	display: flex;
+	flex-direction: column;
+}
