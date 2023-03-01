@@ -1,5 +1,5 @@
 var txtList = [
-    'Angel Hmeli', 'Développeur Front-End', 'Recherche Stage et Alternance', 'Stage du 8 Mai 2023 et pour 3 mois', 'Alternance à partir de Septembre 2023', 'Contactez-moi sur Linkedin : Angel Hmeli', 'A très bientôt !'
+    'Waw!', 'It\'s working', 'For real??', 'No way!!', 'I feel powerful' , 'I AM powerful', 'Zoubis'
 ]
 let i = 0
 const txt = document.querySelector('.txt')
@@ -15,6 +15,6 @@ txt.addEventListener('mouseover', () =>{
     setTimeout(function() { 
         txt.classList.remove('hide')
     }, 500)
-    txt.style.color= '#' + Math.floor(Math.random() * 500).toString(16)
-    shakeDiv.style.backgroundColor= '#' + Math.floor(Math.random() * 700).toString(16)
+    txt.style.color= '#' + Math.floor(Math.random() * 780).toString(16)
+    shakeDiv.style.backgroundColor= '#' + Math.floor(Math.random() * 500).toString(16)
 })
