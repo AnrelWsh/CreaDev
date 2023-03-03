@@ -59,6 +59,8 @@ div#memory_board div {
 #win{
 	color: white;
     background-color: #ffebcdab;
+	padding: 10px;
+	border-radius: 10px;
 	cursor: pointer;
 	transition: ease-out 0.5s;
 }
