@@ -64,10 +64,10 @@ renderer.render(scene, camera)
 
 //Controls
 const controls = new OrbitControls(camera, canvas)
-controls.enableDamping = false;
-controls.enablePan = false;
-controls.enableZoom = false;
-controls.enableRotate = false;
+controls.enableDamping = false
+controls.enablePan = false
+controls.enableZoom = false
+controls.enableRotate = false
 
 //Resize 
 window.addEventListener('resize', () => {
