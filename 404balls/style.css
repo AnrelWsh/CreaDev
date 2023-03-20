@@ -6,10 +6,11 @@
 }
 
 h1{
+  font-size: 60px;
   z-index: 2;
   position: absolute;
   left: 40vw;
-  top: 2vw;
+  top: 6vw;
   text-shadow: 0 0 5px #fff,
   0 0 10px #fff, 0 0 15px #0073e6,
   0 0 20px #0073e6, 0 0 25px #0073e6,

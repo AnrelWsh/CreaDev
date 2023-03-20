@@ -34,6 +34,10 @@ renderer.render(scene, camera)
 const orbit = new OrbitControls(camera, renderer.domElement)
 
 camera.position.set(0, 10, 10)
+orbit.enableDamping = false
+orbit.enablePan = false
+orbit.enableZoom = false
+orbit.enableRotate = false
 orbit.update()
 
 //Init gravity and objects movements
@@ -42,19 +46,20 @@ const world = new CANNON.World({
 })
 
 //Creating the plane
-const planeGeo = new THREE.PlaneGeometry(10, 10)
+const planeGeo = new THREE.PlaneGeometry(20, 5)
 const planeMat = new THREE.MeshStandardMaterial({
   color: 0xffffff,
   side: THREE.DoubleSide
 })
 const planeMesh = new THREE.Mesh(planeGeo, planeMat)
+planeMesh.position.Y = 500
 scene.add(planeMesh)
 
 //Creating plane physics
 const planePhysMat = new CANNON.Material()
 const planeBody = new CANNON.Body({
   type: CANNON.Body.STATIC,
-  shape: new CANNON.Box(new CANNON.Vec3(5, 5, 0.01)),
+  shape: new CANNON.Box(new CANNON.Vec3(10, 2.5, 0.01)),
   material: planePhysMat
 })
 planeBody.quaternion.setFromEuler(-Math.PI / 2, 0, 0)
