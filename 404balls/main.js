@@ -30,9 +30,6 @@ renderer.setSize(window.innerWidth, window.innerHeight)
 renderer.setPixelRatio(2)
 renderer.render(scene, camera)
 
-//Background color
-renderer.setClearColor(0xcecece);
-
 //Setting up camera and controls
 const orbit = new OrbitControls(camera, renderer.domElement)
 
